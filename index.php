@@ -5,19 +5,42 @@
 
   <div class="row">
 
-    <?php
+    <div class="col-md-3">
 
-    while (have_posts()) {
-      the_post();
-      get_template_part('parts/post');
-    }
+      <h3>Menu</h3>
 
-    ?>
+      <?php
 
-  </div>
+        wp_nav_menu(array(
+          'menu' => 'main'
+        ));
 
-  <div class="row">
-    <?php get_template_part('parts/navigation'); ?>
+      ?>
+
+    </div>
+
+
+    <div class="col-md-9">
+
+      <div class="row">
+
+        <?php
+
+        while (have_posts()) {
+          the_post();
+          get_template_part('parts/post');
+        }
+
+        ?>
+
+      </div>
+
+      <div class="row">
+        <?php get_template_part('parts/navigation'); ?>
+      </div>
+
+    </div>
+
   </div>
 
 </div>
