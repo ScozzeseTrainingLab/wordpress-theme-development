@@ -1,12 +1,26 @@
-<?php
+<?php get_header(); ?>
 
-get_header();
 
-while (have_posts()) {
-  the_post();
-  get_template_part('parts/post');
-}
+<div class="container">
 
-get_template_part('parts/navigation');
+  <div class="row">
 
-get_footer();
+    <?php
+
+    while (have_posts()) {
+      the_post();
+      get_template_part('parts/post');
+    }
+
+    ?>
+
+  </div>
+
+  <div class="row">
+    <?php get_template_part('parts/navigation'); ?>
+  </div>
+
+</div>
+
+
+<?php get_footer(); ?>
