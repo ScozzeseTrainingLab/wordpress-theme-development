@@ -1,6 +1,12 @@
 <?php
 
+get_header();
+
 while (have_posts()) {
   the_post();
-  the_title("<h3>", "</h3>");
+  get_template_part('parts/post');
 }
+
+get_template_part('parts/navigation');
+
+get_footer();
