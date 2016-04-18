@@ -2,5 +2,5 @@
 
   <h3><?php the_title(); ?></h3>
   <p><?php the_excerpt(); ?></p>
-  <?php the_permalink(); ?>
+  <a class="btn btn-default" href="<?php the_permalink(); ?>">Read more</a>
 </div>
